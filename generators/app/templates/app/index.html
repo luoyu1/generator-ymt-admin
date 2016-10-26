@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>YMT后台</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css(.) styles/vendor.css -->
+    <!-- bower components css-->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/style.css -->
+    <link rel="stylesheet" type="text/css" href="styles/theme/AdminLTE.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/theme/skins/skin-blue.min.css">
+    <!-- endbuild -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="myApp" class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper" ng-controller="appController">
+        <!-- nav -->
+        <!-- Main Header -->
+        <header class="main-header">
+            <!-- Logo -->
+            <a href="javascript:;" class="logo">
+                <span class="logo-mini"><b>YMT</b></span>
+                <span class="logo-lg"><b>YMT后台管理</b></span>
+            </a>
+            <!-- Header Navbar -->
+            <nav class="navbar navbar-static-top" role="navigation">
+                <!-- Navbar Right Menu -->
+                <a href="javascript:;" class="sidebar-toggle" ng-click="collapse()" data-toggle="offcanvas" role="button">
+                    <span class="sr-only"></span>
+                </a>
+                <div class="navbar-custom-menu">
+                    <ul class="nav navbar-nav">
+                        <!-- Messages: style can be found in dropdown.less-->
+                        <li class="dropdown messages-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-envelope-o"></i>
+                                <!--   <span class="label label-success">4</span> -->
+                            </a>
+                        </li>
+                        <!-- /.messages-menu -->
+                        <!-- Notifications Menu -->
+                        <li class="dropdown notifications-menu">
+                            <!-- Menu toggle button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-bell-o"></i>
+                                <!-- <span class="label label-warning">10</span> -->
+                            </a>
+                        </li>
+                        <!-- Tasks Menu -->
+                        <li class="dropdown tasks-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <i class="fa fa-flag-o"></i>
+                                <!--  <span class="label label-danger">9</span> -->
+                            </a>
+                        </li>
+                        <!-- User Account Menu -->
+                        <li class="dropdown user user-menu">
+                            <!-- Menu Toggle Button -->
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <!-- The user image in the navbar-->
+                                <i class="fa fa-user"></i>
+                                <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                                <span class="hidden-xs">用户名</span>
+                            </a>
+                        </li>
+                        <!-- Control Sidebar Toggle Button -->
+                        <li>
+                            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!-- Left side column. contains the logo and sidebar -->
+        <aside class="main-sidebar">
+            <!-- sidebar: style can be found in sidebar.less -->
+            <section class="sidebar">
+                <!-- search form (Optional) -->
+                <form action="#" method="get" class="sidebar-form">
+                    <div class="input-group">
+                        <input type="text" name="q" class="form-control" placeholder="搜索">
+                        <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+                    </div>
+                </form>
+                <!-- /.search form -->
+                <!-- Sidebar Menu -->
+                <ul class="sidebar-menu">
+                    <li class="active"><a href="#"><i class="fa fa-link"></i> <span>一级目录</span></a></li>
+                    <li><a href="#"><i class="fa fa-link"></i> <span>一级目录</span></a></li>
+                    <li class="treeview">
+                        <a href="#"><i class="fa fa-link"></i> <span>一级目录</span> <i class="fa fa-angle-left pull-right"></i></a>
+                        <ul class="treeview-menu">
+                            <li><a href="#">二级目录</a></li>
+                            <li><a href="#">二级目录</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <!-- /.sidebar -->
+        </aside>
+        <!-- main -->
+        <div class="content-wrapper">
+            <section class="content">
+                <h1 class="text-center">YMT后台管理</h1>
+            </section>
+        </div>
+    </div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="assets/lib/theme/app.min.js"></script>
+    <!-- endbuild -->
+    <!-- build:js(app) scripts/app.js -->
+    <!-- bower:js -->
+    <script type="text/javascript" src="scripts/app.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

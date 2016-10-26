@@ -1,0 +1,80 @@
+<!-- Main Header -->
+<header class="main-header">
+    <!-- Logo -->
+    <a href="javascript:;" class="logo">
+        <span class="logo-lg"><b>YMT后台管理</b></span>
+    </a>
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <!-- Navbar Right Menu -->
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <!-- Messages: style can be found in dropdown.less-->
+                <li class="dropdown messages-menu">
+                    <!-- Menu toggle button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-envelope-o"></i>
+                    </a>
+                </li>
+                <!-- /.messages-menu -->
+                <!-- Notifications Menu -->
+                <li class="dropdown notifications-menu">
+                    <!-- Menu toggle button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                    </a>
+                </li>
+                <!-- Tasks Menu -->
+                <li class="dropdown tasks-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-flag-o"></i>
+                        <!--  <span class="label label-danger">9</span> -->
+                    </a>
+                </li>
+                <!-- User Account Menu -->
+                <li class="dropdown user user-menu">
+                    <!-- Menu Toggle Button -->
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <!-- The user image in the navbar-->
+                        <i class="fa fa-user"></i>
+                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                        <span class="hidden-xs">{{loginUser.userRealname}}</span>
+                    </a>
+                </li>
+                <!-- Control Sidebar Toggle Button -->
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<!-- Left side column. contains the logo and sidebar -->
+<aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+        <!-- search form (Optional) -->
+        <form action="#" method="get" class="sidebar-form">
+            <div class="input-group">
+                <input type="text" name="q" class="form-control" placeholder="搜索">
+                <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i></button>
+              </span>
+            </div>
+        </form>
+        <!-- /.search form -->
+        <!-- Sidebar Menu -->
+        <ul class="sidebar-menu">
+            <li class="header"></li>
+            <li ng-class="{treeview:'m.children && m.children.length>0'}" ng-repeat="m in menus">
+                <a ui-sref="home" ng-if="m.children && m.children.length==0"><i class="fa fa-link"></i> <span>{{m.resourceName}}</span></a>
+                <a ng-if="m.children && m.children.length>0" href="javascript:;" data-toggle="dropdown"><i class="fa fa-link"></i> <span>{{m.resourceName}}</span><i class="fa fa-angle-left pull-right"></i></a>
+                <ul class="treeview-menu" ng-if="m.children && m.children.length>0">
+                    <li ng-repeat="c in m.children"><a ui-sref="{{c.resourceUrl||'home'}}">{{c.resourceName}}</a></li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <!-- /.sidebar -->
+</aside>

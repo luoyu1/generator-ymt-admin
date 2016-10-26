@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>CRM</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- build:css(.) /styles/vendor.css -->
+    <!-- bower components css-->
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/font-awesome/css/font-awesome.min.css">
+    <!-- endbuild -->
+    <!-- build:css(.tmp) styles/style.css -->
+    <link rel="stylesheet" type="text/css" href="styles/theme/AdminLTE.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/theme/skins/skin-blue.min.css">
+    <!-- endbuild -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body ng-app="myApp" class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper" ng-controller="appController">
+        <!-- nav -->
+        <div ng-include="'nav/sidebar.html'" ng-controller="navController"></div>
+        <!-- main -->
+        <div class="content-wrapper">
+            <div class="crm-breadcrumb" ncy-breadcrumb></div>
+            <section class="content">
+                <div ui-view></div>
+            </section>
+        </div>
+    </div>
+    <div class="overlay"></div>
+    <!-- build:js(.) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.js"></script>
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <!-- endbuild -->
+    <!--lib -->
+    <!-- build:js(app) /scripts/app.js -->
+    <!-- app definition -->
+    <script type="text/javascript" src="app.js"></script>
+    <script type="text/javascript" src="appController.js"></script>
+    <script type="text/javascript" src="/shared/admin/app.min.js"></script>
+    <!-- filters -->
+    <!-- directives -->
+    <!-- controllers -->
+    <script type="text/javascript" src="home/homeController.js"></script>
+    <script type="text/javascript" src="nav/navController.js"></script>
+    <!-- services -->
+    <script type="text/javascript" src="home/homeService.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>
