@@ -14,7 +14,7 @@
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/style.css -->
     <link rel="stylesheet" type="text/css" href="styles/theme/AdminLTE.min.css">
-    <link rel="stylesheet" type="text/css" href="styles/theme/skins/skin-blue.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/theme/skins/skin-<%= style %>.min.css">
     <!-- endbuild -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -22,7 +22,7 @@
     <![endif]-->
 </head>
 
-<body ng-app="myApp" class="hold-transition skin-blue sidebar-mini">
+<body ng-app="myApp" class="hold-transition skin-<%= style %> sidebar-mini">
     <div class="wrapper" ng-controller="appController">
         <!-- nav -->
         <div ng-include="'nav/sidebar.html'" ng-controller="navController"></div>
@@ -48,13 +48,14 @@
     <script src="bower_components/angular-breadcrumb/release/angular-breadcrumb.js"></script>
     <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="assets/lib/theme/app.min.js"></script>
+
     <!-- endbuild -->
     <!--lib -->
     <!-- build:js(app) /scripts/app.js -->
     <!-- app definition -->
     <script type="text/javascript" src="app.js"></script>
     <script type="text/javascript" src="appController.js"></script>
-    <script type="text/javascript" src="/shared/admin/app.min.js"></script>
     <!-- filters -->
     <!-- directives -->
     <!-- controllers -->

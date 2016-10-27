@@ -1,5 +1,3 @@
-// Generated on <%= (new Date).toISOString().split('T')[0] %> using <%= pkg.name %> <%= pkg.version %>
-
 'use strict';
 
 // # Globbing
@@ -172,19 +170,6 @@ module.exports = function(grunt) {
                 ignorePath: /^(\.\.\/)+/
             }
         },
-        // cssmin: {
-        //     dist: {
-        //         options: {
-        //             banner: '/*\n <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> \n*/\n'
-        //         },
-        //         files: {
-        //             '<%= config.dist %>/styles/main.min.css': [
-        //                 '.tmp/styles/{,*/}*.css',
-        //                 '<%= config.app %>/styles/{,*/}*.css'
-        //             ]
-        //         }
-        //     }
-        // },
         htmlmin: {
             dist: {
                 options: {
@@ -261,15 +246,6 @@ module.exports = function(grunt) {
                 '<%= config.app %>/**/*.js'
             ]
         },
-        /*
-        mocha: {
-            all: {
-                options: {
-                    run: true,
-                    urls: ['http://<%= connect.test.options.hostname %>:<%= connect.test.options.port %>/index.html']
-                }
-            }
-        },*/
 
         // By default, your `index.html`'s <!-- Usemin block --> will take care
         // of minification. These next options are pre-configured if you do not

@@ -6,12 +6,10 @@
         '$rootScope',
         '$state',
         '$stateParams',
-        'backendSession',
         function($scope,
             $rootScope,
             $state,
-            $stateParams,
-            backendSession) {
+            $stateParams) {
         }
     ])
 })();
