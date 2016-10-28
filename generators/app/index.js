@@ -6,9 +6,6 @@ module.exports = yeoman.Base.extend({
     _generateBasicFiles: function(props) { //copy files
         this.log('-------start to generate files--------')
 
-        this.copy(props.jslib + '_bower.json', 'bower.json');
-
-
         if (props.grunt) {
             this.directory(props.jslib + '_app', 'app');
             this.directory('assets', 'assets');
@@ -16,6 +13,7 @@ module.exports = yeoman.Base.extend({
             this.copy('README.md', 'README.md');
 
             this.copy('package.json', 'package.json');
+            this.copy(props.jslib + '_bower.json', 'bower.json');
             this.copy('Gruntfile.js', 'Gruntfile.js');
         } else {
             this.directory('simple-admin', 'app');
