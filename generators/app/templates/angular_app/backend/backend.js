@@ -12,7 +12,6 @@
      * as soon as there is an authenticated user */
     $httpProvider.interceptors.push(['$q', '$injector','$rootScope', 'configuration',
         function ($q, $injector,$rootScope,configuration) {
-         var alertMsg = $injector.get('alertMsg');
       return {
         request: function(config) {
           //backend apiBaseUrl
@@ -37,11 +36,7 @@
         'response': function(response) {
           // do something on success
           if(response.status==200 && response.data.success===false){
-            if(response.data.error.message=='上传失败'){
-              alertMsg.showInfo(response.data.message);
-            }
-            return $q.reject(response);
-            //return response || $q.when(response);
+
           }else{
             return response || $q.when(response);
           }
@@ -56,7 +51,6 @@
             $rootScope.$broadcast(RAISE_BACKEND_AUTH_EVENTS.notAuthenticated);
           }else if(rejection.status ===403){
             
-            alertMsg.showInfo("您无权限访问该资源，请联系管理员!");
           } 
           return $q.reject(rejection);
         }

@@ -2,11 +2,15 @@
 <header class="main-header">
     <!-- Logo -->
     <a href="javascript:;" class="logo">
+        <span class="logo-mini"><b>YMT</b></span>
         <span class="logo-lg"><b>YMT后台管理</b></span>
     </a>
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Navbar Right Menu -->
+        <a href="javascript:;" class="sidebar-toggle" ng-click="collapse()" data-toggle="offcanvas" role="button">
+            <span class="sr-only"></span>
+        </a>
         <div class="navbar-custom-menu">
             <ul class="nav navbar-nav">
                 <!-- Messages: style can be found in dropdown.less-->
@@ -67,7 +71,7 @@
         <!-- Sidebar Menu -->
         <ul class="sidebar-menu">
             <li class="header"></li>
-            <li ng-class="{treeview:'m.children && m.children.length>0'}" ng-repeat="m in menus">
+            <li ng-repeat="m in menus">
                 <a ui-sref="home" ng-if="m.children && m.children.length==0"><i class="fa fa-link"></i> <span>{{m.resourceName}}</span></a>
                 <a ng-if="m.children && m.children.length>0" href="javascript:;" data-toggle="dropdown"><i class="fa fa-link"></i> <span>{{m.resourceName}}</span><i class="fa fa-angle-left pull-right"></i></a>
                 <ul class="treeview-menu" ng-if="m.children && m.children.length>0">

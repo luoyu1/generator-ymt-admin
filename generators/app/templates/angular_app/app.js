@@ -10,7 +10,6 @@ var myApp = angular
         'ui.router',
         'ui.bootstrap',
         'ngCookies',
-        'ngFileUpload',
         'ncy-angular-breadcrumb'
     ]).config(['$stateProvider', '$urlRouterProvider', '$httpProvider',
         function($stateProvider, $urlRouterProvider, $httpProvider) {

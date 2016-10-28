@@ -41,7 +41,7 @@ module.exports = yeoman.Base.extend({
             type: 'list',
             name: 'theme',
             message: 'which theme do you like?(default theme blue)',
-            choices: ['blue', 'purple', 'yellow', 'green'],
+            choices: ['blue','blue-light', 'purple','purple-light', 'yellow','yellow-light', 'green','green-light','red','red-light'],
             default: 'blue' //
         }];
 
