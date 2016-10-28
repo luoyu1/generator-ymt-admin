@@ -14,7 +14,7 @@ module.exports = yeoman.Base.extend({
 
             this.copy('package.json', 'package.json');
             this.copy(props.jslib + '_bower.json', 'bower.json');
-            this.copy('Gruntfile.js', 'Gruntfile.js');
+            this.bulkCopy('Gruntfile.js', 'Gruntfile.js');
         } else {
             this.directory('simple-admin', 'app');
         }
